@@ -19,7 +19,12 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let ehliyetyası=15
+if(ehliyetyası>=18){
+  console.log('True');
+} else{
+  console.log('False')
+}
 
 
 /*
@@ -33,7 +38,14 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let birinciDeger=18
+let ikinciDeger=23
+if(birinciDeger>ikinciDeger){
+  connsole.log("1. Değer daha büyüktür.");
+} else {
+  let birinciDeger = Math.round(100*Math.random());
+  console.log("2. Değer dahabüyük."+"Yeni atanan 1. değer="+birinciDeger);
+}
 
 
 
@@ -48,8 +60,10 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
-
+let Deger = "1999"
+console.log("Başlangıç data tipi;"+typeof Deger);
+Number(Deger);
+console.log("Değişmiş data tipi;"+typeof Number(Deger));
 
 
 /*
@@ -61,10 +75,10 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  return a*b;
 }
-
+console.log("Çarpım sonucu:"+ carpma(5,8));
 
 
 
@@ -77,9 +91,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(kopkeyasi){
+  return 7*kopkeyasi;
 }
+console.log("Köpeğinizin yaşı;"+kopeginYasi(6))
 
 
 
@@ -103,9 +118,16 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
-
+let oyuncu="Taş"
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  let Secim=Math.round(3*Math.round())
+  if(Secim<=2){
+    bilgisayar="Taş"
+  } else if (Secim<=4){
+    bilgisayar="Kağıt"
+  } else{
+    bilgisayar="Makas"
+  }
 }
 
 
@@ -120,11 +142,12 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+
+function milDonusturucu(Kilometre){
+let Mil = 0.62
+  return Kilometre*Mil;
 }
-
-
+console.log(milDonusturucu(10))
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -134,10 +157,10 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
-
+function feetDonusturucu(Santimetre){
+let feet=0.03
+return Santimetre*feet
+}console.log(feetDonusturucu(20))
 
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımızı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
@@ -153,10 +176,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(Sayı){
+  return Sayı+"küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
 }
-
+for (let z=5;z>0;z--){
+  console.log(cocukSarkisi(z))
+}
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -172,10 +197,21 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  daha aşağıda 'F aldın'
  dönün
 */
-
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+let SinavSonucu=Math.round(Math.random*100)
+function notHesapla(SinavSonucu){
+if(SinavSonucu>=90){
+  return("A aldın.");
+} else if(SinavSonucu>=80){
+ return("B aldın.");
+} else if(SinavSonucu>=70){
+  return("C aldın.");
+} else if(SinavSonucu>=60){
+  return("D aldın.");
+} else {
+  return("F aldın.");
 }
+}
+console.log(notHesapla(SinavSonucu))
 
 
 
@@ -189,11 +225,6 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 İPUCU - yarın işlenecek array(dizi) konusunu önden araştırman gerekecek. (https://www.w3schools.com/js/js_arrays.asp)
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
-
-
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
-}
 
 
 
